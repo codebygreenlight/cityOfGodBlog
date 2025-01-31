@@ -1,0 +1,746 @@
+/* Custom styles to complement Bootstrap */
+:root {
+    --primary-color: #7c3aed;  /* Rich purple */
+    --primary-dark: #5b21b6;   /* Darker purple */
+    --primary-light: #8b5cf6;  /* Lighter purple */
+    --secondary-color: #ec4899; /* Pink */
+    --accent-color: #f59e0b;   /* Amber */
+    --text-dark: #1f2937;      /* Dark gray for text */
+    --text-light: #9ca3af;     /* Light gray for secondary text */
+    
+    --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --gradient-dark: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    --gradient-accent: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+}
+
+/* Carousel Section */
+.carousel-section {
+    min-height: 100vh;
+    padding-top: 76px; /* Adjust for navbar height */
+    background: var(--gradient-dark);
+}
+
+.carousel, .carousel-inner, .carousel-item {
+    height: calc(100vh - 76px);
+}
+
+.hero-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: translateY(-5px);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    color: white;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.hero-content .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-content .btn {
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: white;
+    color: var(--primary-color);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255,255,255,0.2);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 0.7;
+}
+
+.carousel-indicators {
+    bottom: 2rem;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 6px;
+    background-color: white;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .carousel-section {
+        padding-top: 56px;
+    }
+
+    .carousel, .carousel-inner, .carousel-item {
+        height: auto;
+        min-height: calc(100vh - 56px);
+    }
+
+    .hero-content {
+        padding: 2rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content .lead {
+        font-size: 1.1rem;
+    }
+
+    .hero-image {
+        margin: 0 1rem;
+    }
+}
+
+/* News and Birthday Cards */
+.news-card, .birthday-card {
+    height: 100%;
+    transition: transform 0.3s ease;
+    border: none !important;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.news-card:hover, .birthday-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Quote Card */
+.quote-card {
+    background: var(--gradient-primary);
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.2);
+    color: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.quote-icon {
+    font-size: 2rem;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+}
+
+.quote-text {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.quote-reference {
+    font-weight: bold;
+}
+
+.refresh-quote {
+    background: rgba(255, 255, 255, 0.9) !important;
+    color: var(--primary-color) !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.refresh-quote:hover {
+    background: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Contact Icons */
+.contact-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Birthday Section Styles */
+.birthday-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.birthday-list {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.celebrant-item {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
+}
+
+.celebrant-item:last-child {
+    border-bottom: none;
+}
+
+.celebrant-item:hover {
+    background-color: #f8f9fa;
+}
+
+.celebrant-name {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.celebrant-date {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Events Section Styles */
+.events-timeline {
+    position: relative;
+    padding-left: 50px;
+}
+
+.events-timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--gradient-primary);
+}
+
+.event-item {
+    position: relative;
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.event-item::before {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 1.5rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: 4px solid white;
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.event-date {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.event-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.event-description {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.event-time {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.event-time i {
+    margin-right: 0.5rem;
+}
+
+.event-location {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.event-location i {
+    margin-right: 0.5rem;
+}
+
+.upcoming-highlights .highlight-item {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.upcoming-highlights .highlight-item:last-child {
+    border-bottom: none;
+}
+
+.highlight-date {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.highlight-title {
+    font-size: 1rem;
+    margin: 0.25rem 0;
+}
+
+@media (max-width: 768px) {
+    .event-calendar {
+        margin-top: 2rem;
+    }
+}
+
+/* Social Icons Styles */
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+}
+
+.social-icon {
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1.2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-accent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.social-icon:hover {
+    color: white;
+    border-color: transparent;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.social-icon:hover::before {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .social-icons {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+
+/* Update navbar */
+.navbar {
+    background: var(--gradient-dark) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Update section backgrounds */
+.section:nth-child(even), 
+.bg-light {
+    background: linear-gradient(135deg, #f3f4f6, #ffffff) !important;
+}
+
+/* Update headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-dark);
+}
+
+section h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+/* Add subtle background patterns */
+.bg-light {
+    background-image: 
+        linear-gradient(135deg, #f3f4f6, #ffffff),
+        radial-gradient(circle at 100% 100%, rgba(124, 58, 237, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 0% 0%, rgba(236, 72, 153, 0.05) 0%, transparent 50%) !important;
+}
+
+/* Update event calendar */
+.event-calendar {
+    background: white;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+/* Add hover effects to links */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Update buttons */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Update footer */
+footer {
+    background: var(--gradient-dark) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+}
+
+footer .container {
+    position: relative;
+    z-index: 1;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    z-index: 100;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-float:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-float-content {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+}
+
+.whatsapp-float i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.chat-text {
+    font-weight: 600;
+    font-size: 16px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-float-content {
+        padding: 12px;
+    }
+    
+    .chat-text {
+        display: none;
+    }
+    
+    .whatsapp-float i {
+        margin-right: 0;
+    }
+}
+
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/church-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 76px;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(124, 58, 237, 0.2), transparent 50%),
+                radial-gradient(circle at bottom left, rgba(236, 72, 153, 0.2), transparent 50%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-buttons .btn {
+    padding: 1rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.service-times {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-times i {
+    color: var(--primary-color);
+}
+
+.hero-image {
+    position: relative;
+}
+
+.image-stack {
+    position: relative;
+    height: 500px;
+}
+
+.main-image {
+    position: absolute;
+    width: 80%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.floating-image-1 {
+    position: absolute;
+    width: 60%;
+    left: 0;
+    top: 20%;
+    z-index: 2;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-image-2 {
+    position: absolute;
+    width: 50%;
+    left: 10%;
+    bottom: 10%;
+    z-index: 1;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    animation: bounce 2s infinite;
+}
+
+.scroll-indicator a {
+    color: white;
+    font-size: 2rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-indicator a:hover {
+    opacity: 1;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* Add AOS animations */
+[data-aos] {
+    opacity: 0;
+    transition-duration: 1s;
+    transition-property: opacity, transform;
+}
+
+[data-aos="fade-right"] {
+    transform: translateX(-100px);
+}
+
+[data-aos="fade-left"] {
+    transform: translateX(100px);
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+    .hero-content {
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .service-times {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .image-stack {
+        height: 400px;
+        margin-top: 2rem;
+    }
+
+    .main-image {
+        width: 90%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    .floating-image-1,
+    .floating-image-2 {
+        display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        min-height: auto;
+        padding: 6rem 0;
+    }
+
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .image-stack {
+        height: 300px;
+    }
+} 
