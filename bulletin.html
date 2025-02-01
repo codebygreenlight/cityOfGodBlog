@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Bulletin - THECOGCATHEDRAL</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7c3aed',
+                        secondary: '#ec4899',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-primary to-secondary text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold">Church Bulletin</h1>
+                <a href="index.html" class="hover:text-white/80 transition-colors">
+                    <i class="fas fa-home mr-2"></i>
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- News Items -->
+        <div class="space-y-12">
+            <!-- News Item 1 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <!-- Image Section -->
+                    <div class="md:w-1/2">
+                        <img src="https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/431283174_429733276233426_6700189684754210996_n.jpg" 
+                             alt="Sunday Service" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <!-- Content Section -->
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="far fa-calendar mr-2"></i>
+                            <span>March 15, 2024</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Sunday Service Highlights</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            We had a powerful time in God's presence during our Sunday service. The worship was uplifting, and the Word was transformative. Pastor's message on "Walking in Divine Purpose" touched many hearts.
+                        </p>
+                        <div class="space-y-4 text-gray-600">
+                            <p><i class="fas fa-check text-primary mr-2"></i> Over 500 attendees joined us in worship</p>
+                            <p><i class="fas fa-check text-primary mr-2"></i> 15 new members welcomed into the family</p>
+                            <p><i class="fas fa-check text-primary mr-2"></i> Powerful testimonies shared</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Item 2 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <!-- Image Section -->
+                    <div class="md:w-1/2">
+                        <img src="https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/425881326_409522934921127_3524910275125804728_n.jpg" 
+                             alt="Youth Ministry" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <!-- Content Section -->
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="far fa-calendar mr-2"></i>
+                            <span>March 12, 2024</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Youth Ministry Update</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Our youth ministry continues to grow and impact young lives. The recent youth conference was a huge success, with powerful worship sessions and engaging discussions about faith in modern times.
+                        </p>
+                        <div class="space-y-4 text-gray-600">
+                            <p><i class="fas fa-check text-primary mr-2"></i> Youth leadership training program launched</p>
+                            <p><i class="fas fa-check text-primary mr-2"></i> Monthly youth outreach program started</p>
+                            <p><i class="fas fa-check text-primary mr-2"></i> New youth worship team formed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Item 3 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <!-- Image Section -->
+                    <div class="md:w-1/2">
+                        <img src="https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/447235914_480258171180936_6516814336528587549_n.jpg" 
+                             alt="Children's Ministry" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <!-- Content Section -->
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <i class="far fa-calendar mr-2"></i>
+                            <span>March 10, 2024</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Children's Department Activities</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Our children's ministry is flourishing with new programs and activities. We're committed to nurturing young minds in the ways of the Lord through engaging and fun-filled learning experiences.
+                        </p>
+                        <div class="space-y-4 text-gray-600">
+                            <p><i class="fas fa-check text-primary mr-2"></i> New Sunday School curriculum introduced</p>
+                            <p><i class="fas fa-check text-primary mr-2"></i> Children's choir established</p>
+                            <p><i class="fas fa-check text-primary mr-2"></i> Monthly parents' meeting initiated</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="mt-12 flex justify-center gap-4">
+            <button class="px-6 py-3 bg-gray-200 rounded-full text-gray-600 hover:bg-gray-300 transition-colors">
+                <i class="fas fa-chevron-left mr-2"></i>
+                Previous
+            </button>
+            <button class="px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-full hover:opacity-90 transition-opacity">
+                Next
+                <i class="fas fa-chevron-right ml-2"></i>
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2024 THECOGCATHEDRAL. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
